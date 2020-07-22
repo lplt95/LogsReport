@@ -1,0 +1,21 @@
+﻿<Window x:Class="LogsReport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogsReport"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="importBt" Content="Importuj" HorizontalAlignment="Left" Margin="509,337,0,0" VerticalAlignment="Top" Click="importBt_Click"/>
+        <DataGrid x:Name="dataGrid" Margin="168,0,151,117" Height="255" VerticalAlignment="Bottom" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Data zdarzenia" Binding="{Binding DataZdarzenia}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Godzina zdarzenia" Binding="{Binding GodzinaZdarzenia}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Numer pracownika" Binding="{Binding NumerRcpPracownika}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Typ zdarzenia" Binding="{Binding TypZdarzenia}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Rodzaj czytnika" Binding="{Binding RodzajCzytnika}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
